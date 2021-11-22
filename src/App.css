@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(images/weather-app.png);
+  background-size: cover;
+  background-position: top center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  min-height: 100vh;
+
+  
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  padding-top: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  margin: 15px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 10px 0;
+  border-bottom: 3px solid rgb(134, 97, 168);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(0.1, 0,1, 0,1);
+  font-size: 20px;
+  transition: .2s;
+}
+
+input:focus{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button{
+  padding: 8px 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 18px; 
+  font-weight: bold; 
+  border: 3px solid rgb(183, 152, 211);
+  border-radius: 5px;
+  color: rgb(68, 66, 66);
+  transition: .3s;
+}
+
+button:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: rgb(124, 85, 158); ;
+  cursor: pointer;
+
+}
+
+p{
+  font-weight: bold;
+  color: white
+}
+
+p.error{
+  font-size: 20px;
+  color: black
+}
+
+strong{
+  color:rgb(85, 85, 209)
+}
+
+p.city{
+  margin: 10px;
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 2px 3px rgba(0,0,0, 0.5);
+  
+}
+
+p.temp{
+  font-size: 80px;
+  text-shadow: 2px 5px rgba(0,0,0, 0.7);
+  margin-bottom: 30px;
+
+}
+
+p.wind, p.pressure{
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-shadow: 1px 3px rgba(0,0,0, 0.7);
+  
+  
 }
